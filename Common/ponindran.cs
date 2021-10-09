@@ -4,11 +4,7 @@ using System.Text;
 
 namespace Common
 {
-    class selva
+    class ponindran
     {
-        public static void m1()
-        {
-
-        }
     }
 }
