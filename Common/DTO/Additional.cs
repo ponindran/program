@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Common.DTO
 {
-    class Additional
+    public class Additional
     {
     }
 }
