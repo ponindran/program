@@ -12,15 +12,22 @@ namespace Web.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET: api/<ValuesController>
-        [HttpGet]
+        // GET: api/values/get
+        [HttpGet("get")]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "selva", "value2" };
+        }
+
+
+        [HttpGet("get/second")]
+        public IEnumerable<string> GetSecond()
+        {
+            return new string[] { "selva", "value2" };
         }
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
+        [HttpGet("test/{id}")]
         public string Get(int id)
         {
             return "value";
@@ -28,8 +35,8 @@ namespace Web.Api.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
+        public void Post([FromBody] string us)
+        { 
         }
 
         // PUT api/<ValuesController>/5
@@ -41,7 +48,7 @@ namespace Web.Api.Controllers
         // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
-        {
+        { 
         }
     }
 }

@@ -40,9 +40,9 @@ namespace program
 
            var result =  lst.Where(x => x.Email == "test@test.co" );
 
-           eligibility.Eligibility(userObj);
+           eligibility.Eligibility(userObj); 
 
-            eligibility.Eligibility(lst);
+            eligibility.Eligibility(lst); 
         }
     }
 }

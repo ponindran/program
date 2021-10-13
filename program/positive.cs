@@ -20,8 +20,9 @@ namespace program
             {
                 Console.WriteLine("The num is negative number");
             }
-
         }
+
     }
 }
+
 

@@ -62,7 +62,7 @@ namespace program
                 Console.WriteLine("The  candidate is not eligible for admission.\n");
             }
 
-        }
+        } 
 
 
         public static void Eligibility(UserDetail user)

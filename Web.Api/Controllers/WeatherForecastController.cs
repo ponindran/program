@@ -31,7 +31,7 @@ namespace Web.Api.Controllers
 
             Class1 obj = new Class1();
 
-           return obj.GetRandom();
+            return obj.GetRandom();
         }
     }
 }

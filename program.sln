@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessService", "Business
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular", "Angular\Angular.csproj", "{42BBEC20-12E4-45C0-826D-43F7666EB98A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{E0B95107-4829-4369-86A2-1E50AA397502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{E0B95107-4829-4369-86A2-1E50AA397502}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
