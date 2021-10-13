@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Executing a Function on Keypress Event in jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 10px;
+        background: lightgreen;
+        display: none;
+    }
+    div{
+        margin: 20px 0;
+    }
+</style>
+
+<script>
+
+$(document).ready(function(){
+    var i = 0;
+
+    $('input[type="text"]').keypress(function(){
+        $("span").text(i += 1);
+        $("p").show().fadeOut();
+    });
+
+$("#btn-submit").click(function(){
+
+   var firstName =  $('input[type="text"]').val();
+   $.ajax({
+    url : "https://localhost:44389/api/sample", // Url of backend (can be python, php, etc..)
+    type: "POST", // data type (can be get, post, put, delete)
+    data : {"FirstName"  :"test"}, // data in json format
+    crossDomain:true,
+  	async : false, // enable or disable async (optional, but suggested as false if you need to populate data afterwards)
+    success: function(response, textStatus, jqXHR) {
+        debugger;
+    	console.log(response);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+		console.log(jqXHR);
+      	console.log(textStatus);
+      	console.log(errorThrown);
+    }
+});
+   /* var posting = $.post( "https://localhost:44389/api/sample", { "FirstName"  :"test" },{ 'Access-Control-Allow-Origin': '*' } );
+ 
+  // Put the results in a div
+  posting.done(function( data ) {
+      debugger;
+    var content = $( data ).find( "#content" );
+    $( "#result" ).empty().append( content );
+  });*/
+
+    Onclick();
+       
+    });
+});
+
+function Onclick(){
+
+    console.log($('input[type="text"]').val());
+
+    alert("testing");
+}
+
+</script>
+</head>
+<body>
+    <input type="text">
+    <div>Keypress: <span>0</span></div>
+	<div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+    <p>Keypress is triggered.</p>
+    <button id="btn-submit">click</button>
+</body>
+</html>
