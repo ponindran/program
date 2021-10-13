@@ -17,46 +17,42 @@
 
 <script>
 
-$(document).ready(function(){
-    var i = 0;
+    $(document).ready(function () {
+        var i = 0;
 
-    $('input[type="text"]').keypress(function(){
-        $("span").text(i += 1);
-        $("p").show().fadeOut();
+        $('input[type="text"]').keypress(function () {
+            $("span").text(i += 1);
+            $("p").show().fadeOut();
+        });
+
+        $("#btn-submit").click(function () {
+
+            var firstName = $('input[type="text"]').val();
+
+
+            $.ajax({
+                url: 'https://localhost:44389/api/sample',
+                type: 'GET',
+                dataType: "jsonp",
+                crossDomain: true,
+                contentType: 'application/json',
+                success: function (response) {
+                    debugger;
+                    $('#target').html(data.msg);
+                    console.log(response);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+               
+            });
+
+
+
+        });
+
+
     });
-
-$("#btn-submit").click(function(){
-
-   var firstName =  $('input[type="text"]').val();
-   $.ajax({
-    url : "https://localhost:44389/api/sample", // Url of backend (can be python, php, etc..)
-    type: "POST", // data type (can be get, post, put, delete)
-    data : {"FirstName"  :"test"}, // data in json format
-    crossDomain:true,
-  	async : false, // enable or disable async (optional, but suggested as false if you need to populate data afterwards)
-    success: function(response, textStatus, jqXHR) {
-        debugger;
-    	console.log(response);
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-		console.log(jqXHR);
-      	console.log(textStatus);
-      	console.log(errorThrown);
-    }
-});
-   /* var posting = $.post( "https://localhost:44389/api/sample", { "FirstName"  :"test" },{ 'Access-Control-Allow-Origin': '*' } );
- 
-  // Put the results in a div
-  posting.done(function( data ) {
-      debugger;
-    var content = $( data ).find( "#content" );
-    $( "#result" ).empty().append( content );
-  });*/
-
-    Onclick();
-       
-    });
-});
 
 function Onclick(){
 
@@ -69,9 +65,12 @@ function Onclick(){
 </head>
 <body>
     <input type="text">
+
     <div>Keypress: <span>0</span></div>
-	<div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
-    <p>Keypress is triggered.</p>
+    <div><strong>Note:</strong> Enter something inside the input box and see the result.</div>
+    <p >Keypress is triggered.</p>
+
+    <div id="traget">test</div>
     <button id="btn-submit">click</button>
 </body>
 </html>
