@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Select Element by ID</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Highlight element with id mark
+    $("p").css ("background","pink")
+    $("#mark").css("background", "yellow");
+    $("#mark1").css("background", "green");
+
+});
+</script> 
+</head>
+<body>
+    <p id="mark">This is a paragraph.</p>
+    <p id="mark1">This is another paragraph.</p>
+    <p>This is one more paragraph.</p>
+    <p><strong>Note:</strong> The value of the id attribute must be unique in an HTML document.</p>
+</body>
+</html>
