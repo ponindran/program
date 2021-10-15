@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+
+    <link rel="stylesheet" href="main-css.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="main-script.js"></script>
+        
+        <body>
+            <label for="name">Name:</label>
+            <input class="in-color" type="text" id="name">
+            
+            <br>
+            
+            <lable for="gender">gender:</lable>
+            <input type="radio" name="gender" checked="true" value="male" id="male"> 
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" value="female" id="female"> 
+            <label for="female">Female</label><br>
+
+            <lable for="Language">Language:</lable>
+            <label> <input class="checkbox" value=":C++" type="checkbox"> :C++</label>
+            <label> <input class="checkbox" value=":.Net" type="checkbox"> :.Net</label>
+            <label> <input class="checkbox" value=":Java"type="checkbox"> :Java</label>
+            <label> <input class="checkbox" value=":Python" type="checkbox"> :Python</label><br>
+            
+            <label for="City">City:</label>
+            <select>
+                <option selected disabled>--Select City--</option>
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Bangalore</option>
+                <option>Hyderrabad</option>
+            </select><br>
+
+            <input id="btnSubmit" type="submit">
+
+        </body>
+</html>
