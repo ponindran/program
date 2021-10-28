@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Api.Repository;
 
 namespace Web.Api.Controllers
 {
@@ -13,6 +14,10 @@ namespace Web.Api.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+
+        private readonly ITableRepository _tableRepo;
+        
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -20,16 +25,19 @@ namespace Web.Api.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ITableRepository tableRepo)
         {
             _logger = logger;
+            _tableRepo = tableRepo;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<IEnumerable<WeatherForecast>> Get()
         {
 
-            Class1 obj = new Class1();
+           var result = await  _tableRepo.GetCompanies();
+
+             Class1 obj = new Class1();
 
             return obj.GetRandom();
         }
