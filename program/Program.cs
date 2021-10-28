@@ -14,12 +14,12 @@ namespace program
 
              num.number();
 
-            @as.As();
+            @as.As();*/
 
             marklist.list();
-            Console.ReadKey();*/
+            Console.ReadKey();
 
-            //duplicateelements.element();
+            /*duplicateelements.element();
 
             var userObj = new UserDetail();
 
@@ -42,7 +42,7 @@ namespace program
 
            eligibility.Eligibility(userObj); 
 
-            eligibility.Eligibility(lst); 
+            eligibility.Eligibility(lst); */
         }
     }
 }
