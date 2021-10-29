@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Common.DTO;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,10 @@ namespace Web.Api.Controllers
         [HttpGet("get/second")]
         public IEnumerable<string> GetSecond()
         {
+
+            string[] obj = new string[] { "selva", "value2"  };
+
+
             return new string[] { "selva", "value2" };
         }
 
@@ -34,9 +39,17 @@ namespace Web.Api.Controllers
         }
 
         // POST api/<ValuesController>
-        [HttpPost]
+        [HttpPost("test/post/singleparmater")]
         public void Post([FromBody] string us)
         { 
+        }
+
+
+        [HttpPost("test/post/userdetail")]
+        public void PostUserDetsail([FromBody] UserDetail user)
+        {
+
+
         }
 
         // PUT api/<ValuesController>/5
