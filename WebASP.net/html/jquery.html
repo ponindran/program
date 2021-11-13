@@ -15,19 +15,25 @@
         //getAPICall();
         
         //postAPICall(str);
-        var obj = {};
+       /* var obj = {};
         obj.FirstName = "";
         obj.SecondName = "";
         obj.Email = "";
 
         obj.FirstName = fristname;
         obj.SecondName = secondname;
-        obj.Email = email
+        obj.Email = email;*/
+
+        var obj = {
+            FirstName: fristname,
+            SecondName: secondname,
+            Email : email
+        };
 
 
         postUserDetailAPICall(obj);
 
-       
+    
 
     });
 });
@@ -46,7 +52,7 @@
             //dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function (data) {
-
+                
                 alert('pop');
                 //process data
             },
@@ -57,8 +63,7 @@
         });
     }
 
-    function postAPICall(str)
-{
+    function postAPICall(str){
 
 var formData = {
     "value":"Gregor"
