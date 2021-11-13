@@ -31,11 +31,15 @@ namespace Web.Api.Controllers
             _tableRepo = tableRepo;
         }
 
+        /// <summary>
+        /// Used to get the weather report
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IEnumerable<WeatherForecast>> Get()
         {
 
-           var result = await  _tableRepo.GetCompanies();
+          // var result = await  _tableRepo.GetCompanies();
 
              Class1 obj = new Class1();
 

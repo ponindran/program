@@ -6,22 +6,24 @@
 <script>
     $(document).ready(function () {
 
+    // Get value on button click and show alert
+    $("#myBtn").click(function(){
+        var fristname = $("#fristname").val();
+        var secondname = $("#lastname").val();
+        var email = $("#email").val();
+
+        //getAPICall();
+        
+        //postAPICall(str);
         var obj = {};
         obj.FirstName = "";
         obj.SecondName = "";
         obj.Email = "";
 
+        obj.FirstName = fristname;
+        obj.SecondName = secondname;
+        obj.Email = email
 
-
-    // Get value on button click and show alert
-    $("#myBtn").click(function(){
-        var str = $("#myInput").val();
-        //getAPICall();
-        
-        //postAPICall(str);
-        obj.FirstName = str;
-        obj.SecondName = "Second Name";
-        obj.Email = "test@test.com"
 
         postUserDetailAPICall(obj);
 
@@ -106,7 +108,9 @@ $.ajax({
 </script>
 </head>
 <body>
-    <input type="text" id="myInput">
+    <input type="text" id="fristname">
+    <input type='text' id="lastname ">
+    <input type="text" id="email" >
     <button type="button" id="myBtn">Show Value</button>
 </body>
 </html>
