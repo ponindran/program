@@ -21,6 +21,11 @@ namespace Web.Api
         }
 
         // GET api/<SampleController>/5
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public string Get(int id)
         {

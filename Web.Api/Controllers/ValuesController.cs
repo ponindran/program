@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/  fwlink/?LinkID=397860
 
 namespace Web.Api.Controllers
 {
@@ -13,6 +13,13 @@ namespace Web.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly ITableRepository _tableRepo;
+
+        public ValuesController(ITableRepository tableRe)
+        {
+            _tableRepo = tableRe;
+        }
+
         // GET: api/values/get
         [HttpGet("get")]
         public IEnumerable<string> Get()
@@ -46,10 +53,35 @@ namespace Web.Api.Controllers
 
 
         [HttpPost("test/post/userdetail")]
-        public void PostUserDetsail([FromBody] UserDetail user)
+        public IActionResult PostUserDetsail([FromBody] UserDetail user)
         {
+                                       
+            try
+            {
+                if (user.FirstName == null)
+                {
+                    throw new InvalidOperationException("");
+                }
 
+                //To Do : Add validation
+                //1. Empty or not 
+                //Valid email ID
+                //Valid Age
 
+                //Connect
+
+              // await _tableRepo.InterData(user);
+
+                return Ok("test");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex);
+            }
         }
 
         // PUT api/<ValuesController>/5
