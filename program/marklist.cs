@@ -37,5 +37,6 @@ namespace program
             Console.Write("Mark in maths: {0} \n Mark in physics: {1} \nMark in chemistry: {2}\n", mat, phy, che);
             Console.Write("Total mark = {0} \npercentage= {1} \n",total,per);
         }
-    }
+    } 
+     
 }
