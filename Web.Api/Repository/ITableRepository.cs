@@ -11,6 +11,6 @@ namespace Web.Api
     {
         public Task<IEnumerable<Table>> GetCompanies();
 
-        public Task<bool> InterData(UserDetail entity);
+        public Task<bool> InsertData(UserDetail entity);
     }
 }

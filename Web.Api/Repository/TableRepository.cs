@@ -27,11 +27,11 @@ namespace Web.Api.Repository
             }
         }
 
-        public async Task<bool> InterData(UserDetail user)
+        public async Task<bool> InsertData(UserDetail user)
         {
             var query = "insert into  [dbo].[usertable] values()";
 
-
+            return true;
         }
     }
 }
