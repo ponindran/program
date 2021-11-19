@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Api.BusinessService;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/  fwlink/?LinkID=397860
 
@@ -13,11 +14,11 @@ namespace Web.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly ITableRepository _tableRepo;
+        private readonly IEmployeeService _empService;
 
-        public ValuesController(ITableRepository tableRe)
+        public ValuesController(IEmployeeService empService)
         {
-            _tableRepo = tableRe;
+            _empService = empService;
         }
 
         // GET: api/values/get
@@ -53,24 +54,13 @@ namespace Web.Api.Controllers
 
 
         [HttpPost("test/post/userdetail")]
-        public IActionResult PostUserDetsail([FromBody] UserDetail user)
+        public IActionResult PostUserDetsail([FromBody] Employee emp)
         {
                                        
             try
             {
-                if (user.FirstName == null)
-                {
-                    throw new InvalidOperationException("");
-                }
 
-                //To Do : Add validation
-                //1. Empty or not 
-                //Valid email ID
-                //Valid Age
-
-                //Connect
-
-              // await _tableRepo.InterData(user);
+                _empService.InserData(emp);
 
                 return Ok("test");
             }

@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Api.BusinessService;
 using Web.Api.Repository;
 
 namespace Web.Api
@@ -27,7 +28,14 @@ namespace Web.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<DapperContext>();
+
+            //Repository Dependancy Injection Configuration
             services.AddScoped<ITableRepository, TableRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            
+            //Service Dependancy Injection configurtaion 
+            services.AddScoped<IEmployeeService, EmployeeService>();
+
             services.AddControllers();
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {

@@ -13,7 +13,7 @@ namespace Web.Api.Repository
         private readonly DapperContext _context;
         public TableRepository(DapperContext context)
         {
-            _context = context;
+            _context = context; 
         }
 
 
