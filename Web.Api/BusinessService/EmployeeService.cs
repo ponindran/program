@@ -24,7 +24,7 @@ namespace Web.Api.BusinessService
 
             entity.Id = empdto.Id;
             entity.Name = empdto.Name;
-            entity.Email = empdto.Age;
+            entity.Email = empdto.Email;
             entity.Age = empdto.Age;
 
             //Calling the employee Repository to insert the employee data
