@@ -12,6 +12,7 @@ namespace Web.Api
     {
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
+        private readonly string _connectionStringproduct;
 
         private readonly string _connectionStringScale;
         private readonly string _connectionStringStudentmark;
@@ -22,6 +23,7 @@ namespace Web.Api
             //sacle database configuration
             _connectionStringScale = _configuration.GetConnectionString("SqlConnectionScale");
             _connectionStringStudentmark = _configuration.GetConnectionString("SqlConnectionStudentmark");
+            _connectionStringproduct = _configuration.GetConnectionString("SqlConnectionproduct");
         }
        
         
@@ -37,5 +39,7 @@ namespace Web.Api
         {
             return new SqlConnection(_connectionStringStudentmark);
         }
+        public IDbConnection CreateproductConnection()
+       => new SqlConnection(_connectionStringproduct);
     }
 }
