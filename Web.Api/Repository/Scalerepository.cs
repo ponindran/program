@@ -9,7 +9,8 @@ namespace Web.Api.Repository
     public class Scalerepository: IScalerepository 
     {
         public void Insertdata(Scale sclEntity) 
-        { 
+        {
+            var InsertData = "insert into Scale values ("+Scale.Id+") ";
 
         }
 

@@ -8,6 +8,6 @@ namespace Web.Api.Repository
 {
     public interface IScalerepository
     {
-        public void Insertdata(Scale sclEntity);
+        public void Insertdata(Scale sclEntity); 
     }
 }
