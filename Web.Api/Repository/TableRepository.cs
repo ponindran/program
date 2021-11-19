@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using Common.DTO;
+using Dapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Web.Api.Repository
         private readonly DapperContext _context;
         public TableRepository(DapperContext context)
         {
-            _context = context;
+            _context = context; 
         }
 
 
@@ -24,6 +25,13 @@ namespace Web.Api.Repository
                 var companies = await connection.QueryAsync<Table>(query);
                 return companies.ToList();
             }
+        }
+
+        public async Task<bool> InsertData(UserDetail user)
+        {
+            var query = "insert into  [dbo].[usertable] values()";
+
+            return true;
         }
     }
 }

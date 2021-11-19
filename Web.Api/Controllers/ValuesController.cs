@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Api.BusinessService;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/  fwlink/?LinkID=397860
 
 namespace Web.Api.Controllers
 {
@@ -13,6 +14,13 @@ namespace Web.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IEmployeeService _empService;
+
+        public ValuesController(IEmployeeService empService)
+        {
+            _empService = empService;
+        }
+
         // GET: api/values/get
         [HttpGet("get")]
         public IEnumerable<string> Get()
@@ -46,10 +54,24 @@ namespace Web.Api.Controllers
 
 
         [HttpPost("test/post/userdetail")]
-        public void PostUserDetsail([FromBody] UserDetail user)
+        public IActionResult PostUserDetsail([FromBody] Employee emp)
         {
+                                       
+            try
+            {
 
+                _empService.InserData(emp);
 
+                return Ok("test");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex);
+            }
         }
 
         // PUT api/<ValuesController>/5
