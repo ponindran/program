@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,9 +9,20 @@ namespace Web.Api.Repository
 {
     public class Scalerepository: IScalerepository 
     {
+        private readonly DapperContext _context;
+        public Scalerepository(DapperContext context) 
+        {
+            _context = context;
+        }
+
         public void Insertdata(Scale sclEntity) 
         {
-            var InsertData = "insert into Scale values ("+Scale.Id+") ";
+            var insertQuery = "insert into Scale values ("+sclEntity.Id+",'"+sclEntity.code+"','"+sclEntity.name+"') ";
+            using (var connection = _context.createStudentMarkconnection()) 
+            {
+                
+                 connection.Query(insertQuery);
+            }
 
         }
 
