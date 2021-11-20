@@ -1,14 +1,8 @@
-﻿create table usertable(
-id int ,
-[name] varchar(30)not null,
-lastname varchar(30),
-age int not null,
-email varchar(50)not null,
-primary key (id),
-
+﻿Create Table vaccine(
+vaccineId Int Identity(1,1) Primary Key,
+Name Varchar(100) Not Null,
+AgeCategory Varchar(100)Not Null,  
+Eligible varchar(100)Not Null ,
+Dosename varchar(100)Not Null,
+Dosecount int Not Null,
 )
-
-
-select * from usertable
-
-insert into usertable values (1,'test','test',23,'test@email.com')
