@@ -24,7 +24,7 @@ namespace Web.Api.Controllers
         [HttpPost("Scale/QuantityDetails")]
         public void PostQuantityDetails([FromBody] Scale sclDTO)
         {
-
+            _sclService.InsertData(sclDTO);
         }
     }
 }
