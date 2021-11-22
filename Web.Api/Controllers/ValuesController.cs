@@ -33,7 +33,7 @@ namespace Web.Api.Controllers
         public IEnumerable<string> GetSecond()
         {
 
-            string[] obj = new string[] { "selva", "value2"  };
+            string[] obj = new string[] { "selva", "value2" };
 
 
             return new string[] { "selva", "value2" };
@@ -49,14 +49,14 @@ namespace Web.Api.Controllers
         // POST api/<ValuesController>
         [HttpPost("test/post/singleparmater")]
         public void Post([FromBody] string us)
-        { 
+        {
         }
 
 
         [HttpPost("test/post/userdetail")]
         public IActionResult PostUserDetsail([FromBody] Employee emp)
         {
-                                       
+
             try
             {
 
@@ -70,9 +70,25 @@ namespace Web.Api.Controllers
             }
             catch (Exception ex)
             {
+
                 return Unauthorized(ex);
             }
         }
+
+
+        [HttpPost("product/details")]
+        public void productdetails([FromBody] Product pro)
+        {
+
+        }
+
+
+
+
+
+
+
+
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]

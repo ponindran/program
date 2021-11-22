@@ -32,9 +32,11 @@ namespace Web.Api
             //Repository Dependancy Injection Configuration
             services.AddScoped<ITableRepository, TableRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            
+            services.AddScoped<IProductRepository, ProductRespository>();
+
             //Service Dependancy Injection configurtaion 
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IProductService, Productservice>();
 
             services.AddControllers();
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
