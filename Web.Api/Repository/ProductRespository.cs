@@ -17,12 +17,12 @@ namespace Web.Api.Repository
          public void Insertdata(Product proEntity)
         {
             
-            var insertQuery = "Insert into product (Id,productName,price) values(@proEntity.Id,@proEntity)";
-  
-           using (var connection = _context.CreateConnection())
+            var insertQuery = "Insert into product (Id,productName,price) values(@id,@name,@price)";
+
+            using (var connection = _context.CreateproductConnection())
             {
-                
-                connection.Query(insertQuery);
+
+                connection.Query(insertQuery, new { id = proEntity.Id,name=proEntity.productName,price=proEntity.price });
                 
             }
 

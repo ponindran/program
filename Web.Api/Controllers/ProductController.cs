@@ -21,8 +21,24 @@ namespace Web.Api.Controllers
             _proService = proService;
         }
         [HttpPost("product/details")]
-        public void productdetails([FromBody] Product pro)
+        public IActionResult productdetails([FromBody] Product prodto)
         {
+            try
+            {
+                _proService.InserData(prodto);
+
+                return Ok("test");
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex);
+            }
+            catch (Exception ex)
+            {
+
+                return Unauthorized(ex);
+            }
+
 
 
         }
