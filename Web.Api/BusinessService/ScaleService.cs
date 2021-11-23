@@ -9,7 +9,7 @@ namespace Web.Api.BusinessService
 {
     public class ScaleService : IScaleService
     {
-        private readonly IScalerepository _sclrepository;
+        private readonly IScalerepository _sclrepository;  
         public ScaleService(IScalerepository sclrepository)
         {
             _sclrepository = sclrepository;

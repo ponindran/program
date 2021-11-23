@@ -17,8 +17,8 @@ namespace Web.Api.Repository
 
         public void Insertdata(Scale sclEntity) 
         {
-            var insertQuery = "insert into Scale values ("+sclEntity.Id+",'"+sclEntity.code+"','"+sclEntity.name+"') ";
-            using (var connection = _context.createStudentMarkconnection()) 
+            var insertQuery = "insert into Quantity values ("+sclEntity.Id+",'"+sclEntity.code+"','"+sclEntity.name+"') ";
+            using (var connection = _context.CreateScaleConnection()) 
             {
                 
                  connection.Query(insertQuery);
