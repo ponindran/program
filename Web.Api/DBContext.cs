@@ -12,58 +12,24 @@ namespace Web.Api
     {
         private readonly IConfiguration _configuration;
         private readonly string _connectionString;
-<<<<<<< HEAD
-        private readonly string _connectionStringvaccine;
-
-
-=======
-
-        private readonly string _connectionStringScale;
-        private readonly string _connectionStringStudentmark;
->>>>>>> origin/feature-selva
+        private readonly string _connectionStringcategory;
         public DapperContext(IConfiguration configuration)
         {
             _configuration = configuration;
             _connectionString = _configuration.GetConnectionString("SqlConnection");
-<<<<<<< HEAD
-            _connectionString = _configuration.GetConnectionString("SqlConnectionvaccine");
+            _connectionStringcategory = _configuration.GetConnectionString("SqlConnectioncategory");
 
         }
-               public IDbConnection CreateConnection()
- => new SqlConnection(_connectionString);
-
-        public IDbConnection CreateConnectionvaccine()
-             => new SqlConnection(_connectionStringvaccine);
-
-
-
-
-
-
-
-
-
-
-
-=======
-            //sacle database configuration
-            _connectionStringScale = _configuration.GetConnectionString("SqlConnectionScale");
-            _connectionStringStudentmark = _configuration.GetConnectionString("SqlConnectionStudentmark");
-        }
-       
-        
         public IDbConnection CreateConnection()
-        => new SqlConnection(_connectionString);
+=> new SqlConnection(_connectionString);
 
-        public IDbConnection CreateLocationConnection()
-        {
-            return new SqlConnection(_connectionStringScale);
-        }
+        public IDbConnection CreatecategoryConnection()
+             => new SqlConnection(_connectionStringcategory);
 
-        public IDbConnection createStudentMarkconnection() 
-        {
-            return new SqlConnection(_connectionStringStudentmark);
-        }
->>>>>>> origin/feature-selva
-    }
+
+     }
 }
+
+
+
+
