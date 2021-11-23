@@ -15,11 +15,11 @@ namespace Web.Api.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly IEmployeeService _empService;
+        private readonly Icategoryservice _catService; 
 
-        public ValuesController(IEmployeeService empService)
+        public ValuesController(Icategoryservice catService) 
         {
-            _empService = empService;
+            _catService = catService;
         }
 
         // GET: api/values/get
@@ -56,13 +56,13 @@ namespace Web.Api.Controllers
 
 
         [HttpPost("test/post/userdetail")]
-        public IActionResult PostUserDetsail([FromBody] Employee emp)
+        public IActionResult PostUserDetsail([FromBody] category cat)
         {
                                        
             try
             {
 
-                _empService.InserData(emp);
+                _catService.Insertdata(cat);
 
                 return Ok("test");
             }

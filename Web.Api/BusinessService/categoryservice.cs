@@ -3,15 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Api.Repository;
 
 
-namespace Web.Api.BusinessService
+namespace Web.Api.BusinessService 
 {
     public class categoryservice : Icategoryservice
     {
-        private readonly Icategoryservice categoryRepository;
+        private readonly Icategoryrepository categoryRepository;
 
-        public categoryservice(Icategoryservice catRepository)
+        public categoryservice(Icategoryrepository catRepository)
         {
             categoryRepository = catRepository;
         }

@@ -22,7 +22,7 @@ namespace Web.Api.Repository
             var insertQuery = "Insert into category (Id,Code,cName) values(@Id,@Code,@cName)";
             using (var connection = _context.CreatecategoryConnection())
             {
-                var companies = connection.Query(insertQuery, new { id = catentity.Id, Code = catentity.Code, cName = catentity.cName });
+                var companies = connection.Query(insertQuery, new { Id  = catentity.Id, Code = catentity.Code, cName = catentity.cName });
 
             }
         }
