@@ -23,6 +23,7 @@ namespace Web.Api.Controllers
         [HttpPost("Student/MarkList")]
         public void PostQuantityDetails([FromBody] StudentMarkDTO stu)
         {
+            _stuService.Insertdata(stu);
 
         }
     }
