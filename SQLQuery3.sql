@@ -1,1 +1,1 @@
-﻿insert into usertable values(1,selva,kumar,21,selva123@gamil.com);
+﻿drop table Scale;

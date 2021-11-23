@@ -1,0 +1,1 @@
+﻿insert into Quantity(Id,code,name) values (1,M ,miliemeter);
