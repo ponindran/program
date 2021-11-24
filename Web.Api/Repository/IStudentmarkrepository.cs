@@ -6,8 +6,8 @@ using Web.Api.Entity;
 
 namespace Web.Api.Repository
 {
-   public interface IStudentmarkrepository
+    public interface IStudentmarkrepository
     {
-        public void Insertdata(StudentMarkEntity studententity);
+        public void Insertdata(StudentMarkEntity stuEntity);
     }
 }

@@ -21,7 +21,7 @@ namespace Web.Api
             _connectionString = _configuration.GetConnectionString("SqlConnection");
             //sacle database configuration
             _connectionStringScale = _configuration.GetConnectionString("SqlConnectionscale");
-            _connectionStringStudentmark = _configuration.GetConnectionString("SqlConnectionStudentmark");
+            _connectionStringStudentmark = _configuration.GetConnectionString("SqlConnectionStudentMark");
         }
        
         

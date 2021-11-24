@@ -33,11 +33,15 @@ namespace Web.Api
             services.AddScoped<ITableRepository, TableRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IScalerepository, Scalerepository>();
+            services.AddScoped<IStudentmarkrepository, StudentMarkrepository>();
+
 
 
             //Service Dependancy Injection configurtaion 
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IScaleService, ScaleService>();
+            services.AddScoped<IStudentmarkservice, Studentmarkservice>();
+
 
 
             services.AddControllers();

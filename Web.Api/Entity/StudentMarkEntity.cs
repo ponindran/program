@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Web.Api.Entity
 {
-    public class StudentMark
+    public class StudentMarkEntity
     {
         public int Id { get; set; }
         public string name { get; set; }

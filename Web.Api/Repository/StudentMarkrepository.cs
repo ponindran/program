@@ -14,11 +14,11 @@ namespace Web.Api.Repository
 
         public void Insertdata(StudentMarkEntity studententity)
         {
-            var insertQuery = "insert into StudentMark(id,name,subject,mark,result) values (@studententity.Id,@studententity.name ,@studententity.subject,@studententity.mark,@studententity.result);
+            var insertQuery = "insert into StudentMark(id,name,subject,mark,result) values (@Id,@name ,@subject,@mark,@result)";
             using (var connection = _context.createStudentMarkconnection())
             {
 
-                connection.Query(insertQuery);
+                connection.Query(insertQuery, new { Id = studententity.Id, name = studententity.name, subject = studententity.subject, mark = studententity.mark, result = studententity.result });
             }
 
 
