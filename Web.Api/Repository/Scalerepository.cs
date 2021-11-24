@@ -38,7 +38,7 @@ namespace Web.Api.Repository
 
             return firstResult;
         }
-        public void DeleteData(int id) 
+        public IEnumerable<Scale> DeleteData(int id) 
         {
             var insertQuery = "delete from Quantity where id=" + id + "";
             using (var connection = _context.CreateScaleConnection())
@@ -46,7 +46,9 @@ namespace Web.Api.Repository
 
                 connection.Query(insertQuery);
             }
+            var allresult = SelectALLQuantity();
 
+            return allresult;
         }
 
         public IEnumerable<Scale> SelectALLQuantity()

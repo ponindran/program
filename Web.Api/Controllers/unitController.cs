@@ -56,7 +56,7 @@ namespace Web.Api.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _sclRepository.DeleteData(id);
+           return Ok ( _sclRepository.DeleteData(id));
         }
 
     }
