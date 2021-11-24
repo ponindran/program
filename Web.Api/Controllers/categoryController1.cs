@@ -20,7 +20,7 @@ namespace Web.Api.Controllers
         }
 
         [HttpPost("get/arivu")]
-        public IActionResult categoryDetails(category catDTO) 
+        public IActionResult categoryDetails(category catDTO)
         {
             try
             {
@@ -36,9 +36,11 @@ namespace Web.Api.Controllers
             {
                 return Unauthorized(ex);
             }
-            
-        
+
+
         }
-        
+
+
+
     }
 }

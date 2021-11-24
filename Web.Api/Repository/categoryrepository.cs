@@ -18,11 +18,16 @@ namespace Web.Api.Repository
 
         public void Insertdata(category catentity)
         {
+            throw new NotImplementedException();
+        }
 
-            var insertQuery = "Insert into category (Id,Code,cName) values(@Id,@Code,@cName)";
+        public void updatedata(int id, category catentity )
+        {
+
+            var updateQuery = "update quantity set Code=" + catentity.Code + " , cName=" + catentity.cName + "where Id=" + id + " ";
             using (var connection = _context.CreatecategoryConnection())
             {
-                var companies = connection.Query(insertQuery, new { Id  = catentity.Id, Code = catentity.Code, cName = catentity.cName });
+                var companies = connection.Query(updateQuery);
 
             }
         }
