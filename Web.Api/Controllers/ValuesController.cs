@@ -76,11 +76,7 @@ namespace Web.Api.Controllers
         }
 
 
-        [HttpPost("product/details")]
-        public void productdetails([FromBody] Product pro)
-        {
-
-        }
+       
 
 
 
