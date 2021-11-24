@@ -14,17 +14,6 @@ namespace Web.Api.Controllers
     public class unitController : ControllerBase
 
     {
-        private readonly IScaleService _sclService;
-
-        public unitController(IScaleService sclService)
-        {
-            _sclService = sclService;
-        }
-
-        [HttpPost("Scale/QuantityDetails")]
-        public void PostQuantityDetails([FromBody] Scale sclDTO)
-        {
-
-        }
+        
     }
 }

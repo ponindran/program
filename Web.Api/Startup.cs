@@ -33,6 +33,7 @@ namespace Web.Api
             services.AddScoped<ITableRepository, TableRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddScoped<IScalerepository, Scalerepository>();
+
             services.AddScoped<Icategoryrepository,categoryrepository>();
 
 
@@ -40,7 +41,8 @@ namespace Web.Api
             //Service Dependancy Injection configurtaion 
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IScaleService, ScaleService>();
-            
+            services.AddScoped<Icategoryservice, categoryservice>();
+
 
 
 

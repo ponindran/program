@@ -16,9 +16,9 @@ namespace Web.Api.BusinessService
         {
             categoryRepository = catRepository;
         }
-        public void Inserdata(category catdto)
-        {
 
+        public void Insertdata(category catdto)
+        {
             var entity = new Web.Api.Entity.category();
 
             entity.Id = catdto.Id;
@@ -26,12 +26,6 @@ namespace Web.Api.BusinessService
             entity.cName = catdto.cName;
 
             categoryRepository.Insertdata(entity);
-
-        }
-
-        public void Insertdata(category catdto)
-        {
-            throw new NotImplementedException();
         }
     }
 }

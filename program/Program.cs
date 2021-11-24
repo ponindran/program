@@ -18,7 +18,7 @@ namespace program
         
 
 
-            @as.As();
+          
 
 
 
