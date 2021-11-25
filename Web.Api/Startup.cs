@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Web.Api.BusinessService;
 using Web.Api.Repository;
+using Web.Api.Entity;
 
 namespace Web.Api
 {

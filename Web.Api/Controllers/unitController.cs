@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Web.Api.BusinessService;
 using Web.Api.Repository;
+using entity = Web.Api.Entity;
 
 namespace Web.Api.Controllers
 {
@@ -46,18 +47,23 @@ namespace Web.Api.Controllers
                 return Unauthorized(ex);
             }
         }
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]  Web.Api.Entity.Scale sclEntity)
-        {
-           return Ok ( _sclRepository.UpdateData(id,sclEntity));
-             
 
-        }
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpPut("{id}")]
+        public IActionResult Put([FromRoute] int id, [FromBody] Scale sclEntity)
         {
-           return Ok ( _sclRepository.DeleteData(id));
+            var entityObj = new entity.Scale();
+
+            entityObj.code = sclEntity.code;
+
+
+            return Ok(_sclRepository.UpdateData(id, entityObj));
         }
+
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(int id)
+        //{
+        //   return Ok ( _sclRepository.DeleteData(id));
+        //}
 
     }
 }
