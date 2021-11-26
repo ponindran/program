@@ -57,6 +57,8 @@ namespace Web.Api.Controllers
         public IActionResult Delete(int id)
         {
             _sclRepository.DeleteData(id);
+
+            return NoContent();
         }
 
     }
