@@ -1,0 +1,1 @@
+﻿insert into Quantity values(1,'KG', 'kilogram');
