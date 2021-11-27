@@ -32,7 +32,7 @@ namespace Web.Api.Controllers
            
             return Ok( _sclRepository.SelectALLQuantity());
 
-        }
+         }
         [HttpPost("Scale/QuantityDetails")]
         public IActionResult PostQuantityDetails([FromBody] Scale sclDTO)
         {
@@ -51,19 +51,27 @@ namespace Web.Api.Controllers
         [HttpPut("{id}")]
         public IActionResult Put([FromRoute] int id, [FromBody] Scale sclEntity)
         {
-            var entityObj = new entity.Scale();
+            try
+            {
+                var entityObj = new entity.Scale();
+                entityObj.code = sclEntity.code;
+                entityObj.name = sclEntity.name;
 
-            entityObj.code = sclEntity.code;
 
 
-            return Ok(_sclRepository.UpdateData(id, entityObj));
+                return Ok(_sclRepository.UpdateData(id, entityObj));
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
         }
 
-        //[HttpDelete("{id}")]
-        //public IActionResult Delete(int id)
-        //{
-        //   return Ok ( _sclRepository.DeleteData(id));
-        //}
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            return Ok(_sclRepository.DeleteData(id));
+        }
 
     }
 }
