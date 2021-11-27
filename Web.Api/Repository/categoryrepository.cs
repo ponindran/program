@@ -21,15 +21,9 @@ namespace Web.Api.Repository
             throw new NotImplementedException();
         }
 
-        public void updatedata(int id, category catentity )
-        {
-
-            var updateQuery = "update quantity set Code=" + catentity.Code + " , cName=" + catentity.cName + "where Id=" + id + " ";
-            using (var connection = _context.CreatecategoryConnection())
-            {
-                var companies = connection.Query(updateQuery);
+       
 
             }
         }
-    }
-}
+    
+

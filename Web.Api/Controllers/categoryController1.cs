@@ -14,7 +14,7 @@ namespace Web.Api.Controllers
     public class categoryController1 : ControllerBase
     {
         private readonly Icategoryservice _catService;
-        public categoryController1(Icategoryservice catService )
+        public categoryController1(Icategoryservice catService)
         {
             _catService = catService;
         }
@@ -41,6 +41,6 @@ namespace Web.Api.Controllers
         }
 
 
-
     }
 }
+
