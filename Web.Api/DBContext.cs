@@ -23,9 +23,10 @@ namespace Web.Api
         public IDbConnection CreateConnection()
 => new SqlConnection(_connectionString);
 
-        public IDbConnection CreatecategoryConnection()
-             => new SqlConnection(_connectionStringcategory);
-
+        public IDbConnection CreateLocationConnection()
+        {
+            return new SqlConnection(_connectionStringScale);
+        }
 
      }
 }
