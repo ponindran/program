@@ -9,6 +9,8 @@ namespace Web.Api.BusinessService
     public interface Icategoryservice
     {
         public void Insertdata(category catdto);
-        
+        void Updatedata(category catDTO);
+        void Selectdata(category catDTO);
+
     }
 }

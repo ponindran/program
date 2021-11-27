@@ -37,10 +37,97 @@ namespace Web.Api.Controllers
                 return Unauthorized(ex);
             }
 
-
         }
 
+        [HttpPut("put/arivu")]
 
+        private IActionResult categoryDetails1(category catDTO)
+        {
+
+            try
+            {
+                _catService.Updatedata(catDTO);
+                return Ok("test");
+            }
+
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex);
+
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex);
+
+            }
+
+        }
+        [HttpGet("get\arivu")]
+        private IActionResult categorydetails2(category catDTO)
+        {
+            try
+            {
+                _catService.Selectdata(catDTO);
+                return Ok("test");
+
+            }
+
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex);
+
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex);
+
+            }
+
+            [HttpDelete("delete\arivu")]
+
+            Public IActionResult categorydetails3(category catDTO)
+                {
+
+                try
+                {
+                    _catService.Selectdata(catDTO);
+                    return Ok("test");
+
+                }
+                catch (InvalidOperationException ex)
+                {
+                    return BadRequest(ex);
+
+                }
+                catch (Exception ex)
+                {
+                    return Unauthorized(ex);
+
+
+
+
+                }
+
+            }
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
