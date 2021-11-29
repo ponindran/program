@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using System.Collections.Generic;
+using System.Linq;
 using Web.Api.Entity;
 
 namespace Web.Api.Repository
@@ -23,5 +25,19 @@ namespace Web.Api.Repository
 
 
         }
+
+        public IEnumerable<StudentMarkEntity> selectALLQuantity()
+        {
+            var selectQuery = "select * from StudentMark";
+            var StudentMark = new List<StudentMarkEntity>();
+            using (var connection = _context.createStudentMarkconnection())
+            {
+                //Executing the SQL query using the DB connection
+                StudentMark = connection.Query<StudentMarkEntity>(selectQuery).ToList();
+            }
+            return StudentMark;
+            //throw new System.NotImplementedException();
+        }
+        
     } 
 }

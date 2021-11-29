@@ -9,5 +9,6 @@ namespace Web.Api.Repository
     public interface IStudentmarkrepository
     {
         public void Insertdata(StudentMarkEntity stuEntity);
+        public IEnumerable<StudentMarkEntity> selectALLQuantity();
     }
 }
