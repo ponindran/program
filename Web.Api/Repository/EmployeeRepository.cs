@@ -34,6 +34,7 @@ namespace Web.Api.Repository
 
             var result = SelectALLEmployee();
         }
+         
 
         public IEnumerable<Employee> SelectALLEmployee()
         {
@@ -43,8 +44,9 @@ namespace Web.Api.Repository
             {
                 //Executing the SQL query using the DB Connection
                 var employees = connection.Query<Employee>(selectQuery);
-
+                 
             }
+
 
             throw new NotImplementedException();
         }
