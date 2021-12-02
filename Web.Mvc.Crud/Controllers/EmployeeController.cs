@@ -18,6 +18,7 @@ namespace Web.Mvc.Crud.Controllers
 
         public IActionResult Index()
         {
+            
             return View(values);
         }
 
