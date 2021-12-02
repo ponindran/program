@@ -83,32 +83,30 @@ namespace Web.Api.Controllers
 
             }
 
-            [HttpDelete("delete\arivu")]
+            //[httpdelete("delete\arivu")]
 
-            Public IActionResult categorydetails3(category catDTO)
-                {
+            //public iactionresult categorydetails3(category catdto)
+            //    {
 
-                try
-                {
-                    _catService.Selectdata(catDTO);
-                    return Ok("test");
+            //    try
+            //    {
+            //        _catservice.selectdata(catdto);
+            //        return ok("test");
 
-                }
-                catch (InvalidOperationException ex)
-                {
-                    return BadRequest(ex);
+            //    }
+            //    catch (invalidoperationexception ex)
+            //    {
+            //        return badrequest(ex);
 
-                }
-                catch (Exception ex)
-                {
-                    return Unauthorized(ex);
-
-
+            //    }
+            //    catch (exception ex)
+            //    {
+            //        return unauthorized(ex);
 
 
-                }
 
-            }
+
+                 
 
         }
     }

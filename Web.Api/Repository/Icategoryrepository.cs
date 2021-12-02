@@ -8,6 +8,7 @@ namespace Web.Api.Repository
 {
     public interface Icategoryrepository
     {
-        public void Insertdata(category catentity);  
+        public void Insertdata(category catentity);
+        public IEnumerable<category> selectData();
     }
 }

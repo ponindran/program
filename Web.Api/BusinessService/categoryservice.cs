@@ -28,28 +28,19 @@ namespace Web.Api.BusinessService
             categoryRepository.Insertdata(entity);
         }
 
-        public void Selectdata(category catdto)
+        public IEnumerable<category> Selectdata(category catDTO)
         {
             var entity = new Web.Api.Entity.category();
+            entity.Id = catDTO.Id;
+            entity.cName = catDTO.cName;
+            entity.Code = catDTO.Code;
 
-            entity.Id = catdto.Id;
-            entity.Code = catdto.Code;
-            entity.cName = catdto.cName;
-
-            categoryRepository.Insertdata(entity);
+            throw new NotImplementedException();
         }
-     
 
         public void Updatedata(category catDTO)
         {
             throw new NotImplementedException();
         }
-
-
-        public void Selectdata(category catDTO)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

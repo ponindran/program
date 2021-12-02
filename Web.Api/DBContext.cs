@@ -21,11 +21,11 @@ namespace Web.Api
 
         }
         public IDbConnection CreateConnection()
-=> new SqlConnection(_connectionString);
+       => new SqlConnection(_connectionString);
 
         public IDbConnection CreateLocationConnection()
         {
-            return new SqlConnection(_connectionStringScale);
+            return new SqlConnection(_connectionStringcategory);
         }
 
      }

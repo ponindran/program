@@ -18,12 +18,23 @@ namespace Web.Api.Repository
 
         public void Insertdata(category catentity)
         {
+            var insertquery = "INSERT INTO "
+  
+
             throw new NotImplementedException();
         }
 
-       
+        public IEnumerable<category> selectData()
+        {
+            var selectQuerey = "select * from category";
+            using (var connection = _context.CreateLocationConnection())
+            {
+               var result= connection.Query<category>(selectQuerey).ToList();
 
             }
+                throw new NotImplementedException();
         }
+    }
+}
     
 
