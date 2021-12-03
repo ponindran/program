@@ -9,5 +9,13 @@ namespace Web.Api.Repository
     public interface IProductRepository
     {
         public void Insertdata(Product proEntity);
+
+        public IEnumerable<Product> SelectALLProduct();
+
+        public Product Updatedata(int id, Product proEntity);
+
+       // public IEnumerable<Product> Deletedata(ind id);
+
+
     }
 }

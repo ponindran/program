@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular", "Angular\Angular.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{E0B95107-4829-4369-86A2-1E50AA397502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp.Mvc", "WebApp.Mvc\WebApp.Mvc.csproj", "{0C42E103-27C5-43DE-83D2-CC541DA134F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Mvc", "WebApp.Mvc\WebApp.Mvc.csproj", "{0C42E103-27C5-43DE-83D2-CC541DA134F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
