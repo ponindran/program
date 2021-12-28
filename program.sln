@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp.Mvc", "WebApp.Mvc\WebApp.Mvc.csproj", "{0C42E103-27C5-43DE-83D2-CC541DA134F9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notification", "Notification\Notification.csproj", "{ED8920FF-EA2B-4B80-8024-FD7447365C26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiClient", "ApiClient\ApiClient.csproj", "{A72917A7-E14D-410E-AC37-1D913CD18C64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{0C42E103-27C5-43DE-83D2-CC541DA134F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C42E103-27C5-43DE-83D2-CC541DA134F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C42E103-27C5-43DE-83D2-CC541DA134F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED8920FF-EA2B-4B80-8024-FD7447365C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8920FF-EA2B-4B80-8024-FD7447365C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8920FF-EA2B-4B80-8024-FD7447365C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8920FF-EA2B-4B80-8024-FD7447365C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72917A7-E14D-410E-AC37-1D913CD18C64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72917A7-E14D-410E-AC37-1D913CD18C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72917A7-E14D-410E-AC37-1D913CD18C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72917A7-E14D-410E-AC37-1D913CD18C64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

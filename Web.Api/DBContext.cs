@@ -21,7 +21,7 @@ namespace Web.Api
             _configuration = configuration;
             _connectionString = _configuration.GetConnectionString("SqlConnection");
             //sacle database configuration
-            _connectionStringScale = _configuration.GetConnectionString("SqlConnectionScale");
+            _connectionStringScale = _configuration.GetConnectionString("SqlConnectionscale");
             _connectionStringStudentmark = _configuration.GetConnectionString("SqlConnectionStudentmark");
             _connectionStringproduct = _configuration.GetConnectionString("SqlConnectionproduct");
         }
@@ -30,7 +30,7 @@ namespace Web.Api
         public IDbConnection CreateConnection()
         => new SqlConnection(_connectionString);
 
-        public IDbConnection CreateLocationConnection()
+        public IDbConnection CreateScaleConnection()
         {
             return new SqlConnection(_connectionStringScale);
         }

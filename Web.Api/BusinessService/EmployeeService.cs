@@ -7,7 +7,7 @@ using Web.Api.Repository;
 
 namespace Web.Api.BusinessService
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeService:IEmployeeService
     {
         private readonly IEmployeeRepository employeeRepository; 
 

@@ -8,5 +8,6 @@ namespace Web.Api.Repository
     public class StudentMark
     {
 
+
     }
 }

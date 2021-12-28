@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Web.Api.BusinessService;
 
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/  fwlink/?LinkID=397860
 
 namespace Web.Api.Controllers
@@ -26,6 +27,7 @@ namespace Web.Api.Controllers
         public IEnumerable<string> Get()
         {
             return new string[] { "selva", "value2" };
+
         }
 
 
@@ -73,6 +75,11 @@ namespace Web.Api.Controllers
 
                 return Unauthorized(ex);
             }
+        }
+        [HttpPost("Scale/QuantityDetails")]
+        public void  PostQuantityDetails([FromBody] Scale sclDTO ) 
+        {
+            
         }
 
 

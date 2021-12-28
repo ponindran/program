@@ -9,5 +9,10 @@ namespace Web.Api.Repository
     public interface IScalerepository
     {
         public void Insertdata(Scale sclEntity);
+        public IEnumerable<Scale> SelectALLQuantity();
+        public Scale UpdateData(int id, Scale sclEntity);
+        public void DeleteData(int id);
+
     }
+
 }

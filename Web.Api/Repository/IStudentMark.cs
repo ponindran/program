@@ -7,6 +7,6 @@ namespace Web.Api.Repository
 {
     interface IStudentMark
     {
-
+        
     }
 }
