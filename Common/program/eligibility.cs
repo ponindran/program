@@ -1,4 +1,4 @@
-﻿using BusinessService;
+﻿
 using Common.DTO;
 using System;
 using System.Collections.Generic;
@@ -68,9 +68,9 @@ namespace program
         public static void Eligibility(UserDetail user)
         {
 
-            var obj = new Class1();
+           // var obj = new Class1();
 
-            obj.GetRandomUserDetail(user);
+            //obj.GetRandomUserDetail(user);
 
             Console.WriteLine(user.FirstName);
         }

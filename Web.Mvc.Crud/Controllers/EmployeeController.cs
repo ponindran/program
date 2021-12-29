@@ -11,9 +11,9 @@ namespace Web.Mvc.Crud.Controllers
     {
         private List<Employee> values = new List<Employee> {
 
-            new Employee { EmployeeId = 1, Address = "ooty", Name="Dhoni", Designation = "Developer", JoiningDate = DateTime.Now.AddYears(-1) },
-            new Employee { EmployeeId = 2, Address = "palani", Name="Rohit", Designation = "Developer", JoiningDate = DateTime.Now.AddYears(-1) },
-            new Employee { EmployeeId = 3, Address = "chennai", Name="Dravid", Designation = "Developer", JoiningDate = DateTime.Now.AddYears(-1) },
+            new Employee { EmployeeId = 1, Address = "Csk", Name="Dhoni", Designation = "Caption-Wk", JoiningDate = DateTime.Now.AddYears(-1) },
+            new Employee { EmployeeId = 2, Address = "Csk", Name="Raina", Designation = "Batsman", JoiningDate = DateTime.Now.AddYears(-1) },
+            new Employee { EmployeeId = 3, Address = "Csk", Name="Jadeja", Designation = "Bowler", JoiningDate = DateTime.Now.AddYears(-1) },
         };
 
         public IActionResult Index()

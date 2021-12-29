@@ -20,7 +20,7 @@ namespace Web.Mvc.Crud.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("index");
         }
 
         public IActionResult Privacy()
